@@ -3,7 +3,7 @@ import { Styles } from '../../constants/styles';
 import { getFormattedDate } from '../../util/date';
 import { useNavigation } from '@react-navigation/native';
 
-function ExpenseItem({desc, amount, date}) {
+function ExpenseItem({id, desc, amount, date}) {
 
     const navi = useNavigation();
 
