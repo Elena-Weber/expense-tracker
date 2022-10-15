@@ -1,9 +1,9 @@
 export const Styles = {
     colors: {
-        primary: '#e4d9fd',
-        primaryLight: '#c6affc',
-        primaryDark: '#200364',
-        accent: '#f7bc0c',
-        error: '#9b095c'
+        primary: '#5EBAA6',
+        primaryLight: '#B8E1D9',
+        primaryDark: '#237C6C',
+        accent: '#2D554A',
+        error: '#F0F0F8'
     }
 }

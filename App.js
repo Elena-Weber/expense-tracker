@@ -15,9 +15,9 @@ function Overview() {
   return (
     <BottomTabs.Navigator
       screenOptions={{
-        headerStyle: {backgroundColor: Styles.colors.primaryDark},
+        headerStyle: {backgroundColor: Styles.colors.accent},
         headerTintColor: 'white',
-        tabBarStyle: {backgroundColor: Styles.colors.primaryDark},
+        tabBarStyle: {backgroundColor: Styles.colors.accent},
         tabBarActiveTintColor: 'white'
       }}
     >
