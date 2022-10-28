@@ -1,6 +1,6 @@
 import { View, StyleSheet } from 'react-native';
 import ExpensesList from './ExpensesList';
-import ExpensesSummary from './expensesSummary';
+import ExpensesSummary from './ExpensesSummary'
 import { Styles } from '../../constants/styles';
 
 const DUMMY_EXPENSES = [
