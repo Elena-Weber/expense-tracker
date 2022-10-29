@@ -17,15 +17,15 @@ function ManageExpenses({route, navigation}) { //provided by react navigation
     }, [navigation, isEditable]);
 
     function deleteHandler() {
-
+        navigation.goBack();
     }
 
     function cancelHandler() {
-
+        navigation.goBack();
     }
 
     function confirmHandler() {
-
+        navigation.goBack();
     }
 
     return (
