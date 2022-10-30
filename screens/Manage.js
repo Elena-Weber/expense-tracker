@@ -1,10 +1,13 @@
-import { useLayoutEffect } from 'react';
+import { useContext, useLayoutEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Button from '../components/UI/Button';
 import IconButton from '../components/UI/IconButton';
 import { Styles } from '../constants/styles';
+import { ExpensesContext } from '../store/expenses-context';
 
 function ManageExpenses({route, navigation}) { //provided by react navigation
+
+    const expensesCtx = useContext(ExpensesContext);
 
     const editedExpenseId = route.params?.expenseId; // if params exit, find expenseId there
 
@@ -17,6 +20,7 @@ function ManageExpenses({route, navigation}) { //provided by react navigation
     }, [navigation, isEditable]);
 
     function deleteHandler() {
+        expensesCtx.deleteExpense(editedExpenseId);
         navigation.goBack();
     }
 
@@ -25,6 +29,9 @@ function ManageExpenses({route, navigation}) { //provided by react navigation
     }
 
     function confirmHandler() {
+        isEditable ?
+            expensesCtx.updateExpense(editedExpenseId, {desc: 'Test updated', amount: 11.11, date: new Date('2022-10-29')}) :
+            expensesCtx.addExpense({desc: 'Test', amount: 10.10, date: new Date('2022-10-28')});
         navigation.goBack();
     }
 
@@ -81,7 +88,7 @@ const styles = StyleSheet.create({
         marginTop: 15,
         paddingTop: 8,
         borderTopWidth: 2,
-        borderTopColor: Styles.colors.error,
+        borderTopColor: Styles.colors.primaryDark,
         alignItems: 'center'
     }
 })

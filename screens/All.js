@@ -9,6 +9,7 @@ function AllExpenses() {
     return <Expenses
         expensesPeriod="Total"
         expenses={expensesCtx.expenses}
+        defaultText='Nothing to display'
     />
 }
 
